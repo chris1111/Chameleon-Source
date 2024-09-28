@@ -1,8 +1,0 @@
-memrchr.o: memrchr.c /Users/chris/chameleon/trunk/autoconf.h \
-  /Users/chris/chameleon/trunk/i386/include/stddef.h \
-  /Users/chris/chameleon/trunk/i386/include/sys/_types.h \
-  /Users/chris/chameleon/trunk/i386/include/sys/cdefs.h \
-  /Users/chris/chameleon/trunk/i386/include/machine/_types.h \
-  /Users/chris/chameleon/trunk/i386/include/i386/_types.h \
-  /Users/chris/chameleon/trunk/i386/include/string.h \
-  /Users/chris/chameleon/trunk/i386/include/_types.h

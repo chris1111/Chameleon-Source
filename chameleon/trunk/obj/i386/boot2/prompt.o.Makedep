@@ -1,2 +1,0 @@
-prompt.o: prompt.c /Users/chris/chameleon/trunk/autoconf.h \
-  /Users/chris/chameleon/trunk/vers.h

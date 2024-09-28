@@ -1,7 +1,0 @@
-limits.o: limits.cpp /Users/chris/chameleon/trunk/autoconf.h \
-  include/limits include/climits \
-  /Users/chris/chameleon/trunk/i386/include/limits.h \
-  /Users/chris/chameleon/trunk/i386/include/sys/cdefs.h \
-  /Users/chris/chameleon/trunk/i386/include/i386/limits.h \
-  /Users/chris/chameleon/trunk/i386/include/i386/_limits.h \
-  /Users/chris/chameleon/trunk/i386/include/sys/syslimits.h

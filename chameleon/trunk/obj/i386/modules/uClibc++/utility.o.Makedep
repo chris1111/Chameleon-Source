@@ -1,3 +1,0 @@
-utility.o: utility.cpp /Users/chris/chameleon/trunk/autoconf.h \
-  include/utility include/basic_definitions \
-  include/system_configuration.h

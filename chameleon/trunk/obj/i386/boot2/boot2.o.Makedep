@@ -1,4 +1,0 @@
-boot2.o: boot2.s /Users/chris/chameleon/trunk/autoconf.h \
-  /Users/chris/chameleon/trunk/i386/include/architecture/i386/asm_help.h \
-  /Users/chris/chameleon/trunk/i386/include/architecture/i386/reg_help.h \
-  /Users/chris/chameleon/trunk/i386/libsa/memory.h mboot.h multiboot.h

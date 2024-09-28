@@ -1,2 +1,0 @@
-table.o: table.c /Users/chris/chameleon/trunk/autoconf.h \
-  ../libsa/memory.h

@@ -1,8 +1,0 @@
-new_handler.o: new_handler.cpp /Users/chris/chameleon/trunk/autoconf.h \
-  include/new include/basic_definitions include/system_configuration.h \
-  include/exception include/cstddef \
-  /Users/chris/chameleon/trunk/i386/include/stddef.h \
-  /Users/chris/chameleon/trunk/i386/include/sys/_types.h \
-  /Users/chris/chameleon/trunk/i386/include/sys/cdefs.h \
-  /Users/chris/chameleon/trunk/i386/include/machine/_types.h \
-  /Users/chris/chameleon/trunk/i386/include/i386/_types.h
