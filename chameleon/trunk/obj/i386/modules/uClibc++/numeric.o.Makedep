@@ -1,0 +1,3 @@
+numeric.o: numeric.cpp /Users/chris/chameleon/trunk/autoconf.h \
+  include/numeric include/basic_definitions \
+  include/system_configuration.h include/exception

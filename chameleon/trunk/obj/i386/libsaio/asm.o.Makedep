@@ -1,0 +1,4 @@
+asm.o: asm.s \
+  /Users/chris/chameleon/trunk/i386/include/architecture/i386/asm_help.h \
+  /Users/chris/chameleon/trunk/i386/include/architecture/i386/reg_help.h \
+  ../libsa/memory.h

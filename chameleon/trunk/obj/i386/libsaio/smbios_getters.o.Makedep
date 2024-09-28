@@ -1,0 +1,92 @@
+smbios_getters.o: smbios_getters.c \
+  /Users/chris/chameleon/trunk/autoconf.h ../boot2/config.h \
+  smbios_getters.h libsaio.h ../libsa/libsa.h \
+  /Users/chris/chameleon/trunk/i386/include/mach-o/loader.h \
+  /Users/chris/chameleon/trunk/i386/include/stdint.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/machine.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/machine/vm_types.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/i386/vm_types.h \
+  /Users/chris/chameleon/trunk/i386/include/i386/_types.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/i386/vm_param.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/boolean.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/machine/boolean.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/i386/boolean.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/vm_prot.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/machine/thread_status.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/i386/thread_status.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/i386/_structs.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/message.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/port.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/cdefs.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/kern_return.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/machine/kern_return.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/i386/kern_return.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/i386/fp_reg.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/i386/thread_state.h \
+  /Users/chris/chameleon/trunk/i386/include/i386/eflags.h \
+  /Users/chris/chameleon/trunk/i386/include/architecture/byte_order.h \
+  /Users/chris/chameleon/trunk/i386/include/libkern/OSByteOrder.h \
+  /Users/chris/chameleon/trunk/i386/include/libkern/_OSByteOrder.h \
+  /Users/chris/chameleon/trunk/i386/include/libkern/i386/_OSByteOrder.h \
+  /Users/chris/chameleon/trunk/i386/include/libkern/i386/OSByteOrder.h \
+  /Users/chris/chameleon/trunk/i386/include/stdarg.h \
+  /Users/chris/chameleon/trunk/i386/include/stddef.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/_types.h \
+  /Users/chris/chameleon/trunk/i386/include/machine/_types.h \
+  /Users/chris/chameleon/trunk/i386/include/stdbool.h ../libsa/memory.h \
+  io_inline.h saio_types.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/reboot.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/types.h \
+  /Users/chris/chameleon/trunk/i386/include/machine/types.h \
+  /Users/chris/chameleon/trunk/i386/include/i386/types.h \
+  /Users/chris/chameleon/trunk/i386/include/machine/endian.h \
+  /Users/chris/chameleon/trunk/i386/include/i386/endian.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/_endian.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/_structs.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/param.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/syslimits.h \
+  /Users/chris/chameleon/trunk/i386/include/i386/param.h \
+  /Users/chris/chameleon/trunk/i386/include/i386/_param.h \
+  /Users/chris/chameleon/trunk/i386/include/limits.h \
+  /Users/chris/chameleon/trunk/i386/include/i386/limits.h \
+  /Users/chris/chameleon/trunk/i386/include/i386/_limits.h bios.h \
+  bootargs.h nbp_cmd.h \
+  /Users/chris/chameleon/trunk/i386/include/IOKit/IOTypes.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/vm_types.h \
+  /Users/chris/chameleon/trunk/i386/include/IOKit/IOReturn.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/error.h \
+  /Users/chris/chameleon/trunk/i386/include/libkern/OSTypes.h \
+  /Users/chris/chameleon/trunk/i386/include/device/device_types.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/std_types.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/mach_types.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/host_info.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/vm_statistics.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/time_value.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/host_notify.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/host_special_ports.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/memory_object_types.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/vm_sync.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/exception_types.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/machine/exception.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/i386/exception.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/thread_status.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/machine/thread_state.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/processor_info.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/machine/processor_info.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/i386/processor_info.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/task_info.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/policy.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/task_policy.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/task_special_ports.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/thread_info.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/thread_policy.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/thread_special_ports.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/clock_types.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/vm_attributes.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/vm_inherit.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/vm_purgable.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/vm_behavior.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/vm_region.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/machine/vm_param.h \
+  /Users/chris/chameleon/trunk/i386/include/mach/kmod.h saio_internal.h \
+  smbios.h platform.h pci.h bootstruct.h device_tree.h

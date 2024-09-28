@@ -1,0 +1,19 @@
+strtoull.o: strtoull.c /Users/chris/chameleon/trunk/autoconf.h strtox.c \
+  /Users/chris/chameleon/trunk/i386/include/stddef.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/_types.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/cdefs.h \
+  /Users/chris/chameleon/trunk/i386/include/machine/_types.h \
+  /Users/chris/chameleon/trunk/i386/include/i386/_types.h \
+  /Users/chris/chameleon/trunk/i386/include/stdlib.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/types.h \
+  /Users/chris/chameleon/trunk/i386/include/machine/types.h \
+  /Users/chris/chameleon/trunk/i386/include/i386/types.h \
+  /Users/chris/chameleon/trunk/i386/include/machine/endian.h \
+  /Users/chris/chameleon/trunk/i386/include/i386/endian.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/_endian.h \
+  /Users/chris/chameleon/trunk/i386/include/libkern/_OSByteOrder.h \
+  /Users/chris/chameleon/trunk/i386/include/libkern/i386/_OSByteOrder.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/_structs.h \
+  /Users/chris/chameleon/trunk/i386/include/inttypes.h \
+  /Users/chris/chameleon/trunk/i386/include/_types.h \
+  /Users/chris/chameleon/trunk/i386/include/stdint.h

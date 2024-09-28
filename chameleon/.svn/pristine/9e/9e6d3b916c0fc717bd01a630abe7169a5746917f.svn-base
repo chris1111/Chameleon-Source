@@ -1,0 +1,23 @@
+TODO List for Chameleon Boot Loader
+====================================
+
+- Find out who to build libstuff & ld_classic inside this project
+
+- Move acpicodec to the IndustryStandard acpi efi library
+
+- split nvidia, gma and ati code into separate modules
+- move device_inject, MBR (OSX works better on Guid partition theme anyway), winfs, bsdfs, ext2fs, befs, and the command lspci, memory, more and video into modules
+- Implement a pool allocator, so each module will run and allocate memory in there own pool, de-alloc all allocated memory by the module, 
+  will be done simply by destroying the pool
+
+- implement cpu topology
+- Backport cconfig from the trunk
+- Implement a Host like in bits to avoid some return issues
+
+- update project with corehash
+
+NOTE: It seems that nvram variables must be set thru efiRuntimeServices->SetVariable(...),
+  then, the /options node is filled by kernel depending on the Runtime Services.
+  If true, this requires a more complete EFI implementation (perhaps in a module, or a kext).
+
+- Make an OS X server icon for LoginToLion

@@ -1,0 +1,306 @@
+GUI module:
+----------
+  GUI=No                Disable the GUI (Enabled by default).
+  "Boot Banner"=Yes|No  Show boot banner in GUI mode (Enabled by default).
+  "Legacy Logo"=Yes|No  Use the legacy grey apple logo (Disabled by default).
+  RandomTheme=Yes|No    Enable/Disable switching skin randomly at boot time(Disabled by default).
+  
+
+GraphicsEnabler module:
+----------------------
+  EnableGFXModule=Yes|No  Fully enable/disable the GraphicsEnabler module (Enabled by default, if the module is installed)
+ 
+  UseAtiROM=Yes|No        Use an alternate Ati ROM image 
+                            (path: /Extra/<vendorid>_<devid>.rom)
+  UseNvidiaROM=Yes|No     Use an alternate Nvidia ROM image 
+                            (path:  /Extra/<vendorid>_<devid>.rom)
+  VBIOS=Yes|No            Inject VBIOS to device-properties.
+
+
+  NVIDIA card injection usage e.g: see doc/com.apple.Boot.example.plist for an example
+
+		<key>NVIDIA</key>
+		<array>
+		<dict>
+		<key>Chipset Name</key>
+		<string>Quadro FX 380</string>
+		<key>IOPCIPrimaryMatch</key>
+		<string>0x10DE0658</string>
+		<key>VRam Size</key>
+		<string>256</string>
+		</dict>
+		<dict>
+		<key>Chipset Name</key>
+		<string>YOUR_CARD_NAME</string>
+		<key>IOPCIPrimaryMatch</key>
+		<string>YOUR_CARD_ID</string>
+		<key>VRam Size</key>
+		<string>YOUR_CARD_VRAM_SIZE</string>
+		</dict>
+		<dict>
+		<key>Chipset Name</key>
+		<string>YOUR_SECOND_CARD_NAME</string>
+		<key>IOPCIPrimaryMatch</key>
+		<string>YOUR_SECOND_CARD_ID</string>
+		<key>VRam Size</key>
+		<string>YOUR_SECOND_CARD_VRAM_SIZE</string>
+		</dict>
+		.
+		.
+		.
+		.
+		</array>
+
+Networking module:
+-----------------
+  EnableNetworkModule=Yes|No	Fully enable/disable the Networking module (Enabled by default, if the module is installed)
+
+  EthernetBuiltIn=Yes|No		Automatic "built-in"=yes device-properties generation
+								for ethernet interfaces. (Enabled by default)
+  
+  EnableWifi=Yes|No				Enable wifi device-properties generation, if detected. (Enabled by default)
+
+						  
+Memory module:
+-------------
+  EnableMemoryModule=Yes|No	 Fully enable/disable the Memory module (Enabled by default, if the module is installed)
+
+USBFix module:
+----------
+  EnableUSBModule=Yes|No	 Fully enable/disable the USB module (Enabled by default, if the module is installed)
+	
+  USBBusFix=Yes|No           Enable all USB fixes below (except EHCIhard): (Enabled by default)
+  EHCIacquire=Yes|No         Enable the EHCI fix .
+  UHCIreset=Yes|No           Enable the UHCI fix .
+  USBLegacyOff=Yes|No        Enable the USB Legacy fix .
+  
+  EHCIhard = Yes|No			 Try EHCI soft reset (Disabled by default)
+  
+HPET module:
+-----------
+  EnableUSBModule=Yes|No	 Fully enable/disable the HPET module (Enabled by default, if the module is installed)
+
+HibernateEnabler:
+----------------
+  EnableHibernateModule=Yes|No	 Fully enable/disable the HibernateEnabler module (Enabled by default, if the module is installed)
+  
+  Wake=No						Disable wake up after hibernation (default: enabled).
+  ForceWake=Yes					Force using the sleepimage (Disabled by default).
+  WakeImage=<file>				Use an alternate sleepimage file. 
+								(default path is /private/var/vm/sleepimage).
+
+SMBIOS modules:
+--------------
+  SMBIOS=<file>         Use an alternate SMBIOS.plist file 
+                        (default path: /Extra/SMBIOS.plist, 
+						bt(0,0)/Extra/SMBIOS.plist).
+
+  SMBIOSdefaults=Yes|No       Don't use the Default values for SMBIOS overriding
+                              if smbios.plist doesn't exist, factory
+                              values are kept(Disabled by default).
+
+  randomSerial=Yes|No         Generate a machine serial number randomly, can be useful 
+			      for iCloud registration(Disabled by default).
+
+RamDiskLoader module:
+-------------------- 
+  EnableRamDiskLoader=Yes|No	Fully enable/disable the RamDiskLoader module (Enabled by default, if the module is installed)
+ 
+  md0=<file>					Load raw img file into memory for use as XNU's md0
+								ramdisk. /Extra/Postboot.img is used otherwise.	
+						  
+Keymapper module:
+----------------	
+  EnableKeyMapper=Yes|No	Fully enable/disable the Keymapper module (Enabled by default, if the module is installed)
+					  
+  KeyboardType=<value>		change the type of the Keyboard. (Default is QWERTY)
+							for now only <value>="AZERTY" is supported.
+
+CPUfreq module:
+--------------
+  EnableCPUfreqModule=Yes|No	Fully enable/disable the CPUfreq module (Enabled by default, if the module is installed)
+
+  FixFSB=Yes|No					Enable alternative front side bus fix(Disabled by default).
+  
+  MaxBusRatio=<n>	(was BusRatio) Set the current Bus Ratio to n,
+  			         n must be a multiple of 10,
+			         (eg. if you want to set a bus ratio to 8.5, n will be
+			         8.5*10=85), 
+			         if n = 0, MaxBusRatio = Disable,
+			         if not set, n = the current
+			         bios bus ratio, set this value allow CPUfreq to 
+                     fix some cosmetic issues.
+						  			  
+AcpiCodec module: 
+------------------
+  IMPORTANT NOTE: 1- with AcpiCodec all aml files must be placed in /Extra/Acpi/, alternate or overridden path is no longer supported
+                  
+                  2- the name of the aml file(s) is not important anymore but it must contain the extention .aml, for example let suppose that you have 3 aml files: dsdt.aml, ssdt-0.aml and ssdt-1.aml
+                     you can rename your dsdt file into blabla.aml, and rename your ssdt files into blablabla.aml and blablablabla.aml, acpicodec will auto-magically detect those files as 2 ssdt and one dsdt
+
+  EnableAcpiModule=Yes|No	Fully enable/disable the Acpipatcher module (Enabled by default, if the module is installed)
+     
+  RestartFix=Yes|No		Enable/Disable internal restart fix patch (Enabled by default, only available for intel platform).
+
+  ResetType=0|1			0 : PCI reset (Default)
+				1 : keyboard reset 
+
+  EnableSpeedStep=Yes|No	Enable/Disable GenerateCStates & GeneratePStates (Disabled by default).
+  
+  GeneratePStates=Yes|No	Enable/Disable Generate P-states SSDT table (Disabled by default).
+  GenerateCStates=Yes|No	Enable/Disable Generate C-states SSDT table (Disabled by default).
+  EnableC4State=Yes|No		Enable C4 state in C-states SSDT table, GenerateCStates=Yes is needed (Disabled by default).
+  
+  StripAPICTable=Yes|No		Enable/Disable Generate a stripped MADT (APIC) table (Enabled by default).
+
+  IntelFADTSpec=Yes|No		Enable/Disable Intel recommendations for the FADT table (Enabled by default). 
+				Warning : When enabled, this setting disable the C2 and C3 C-states, but be aware that these are the Intel's recommendations for the newest CPU, 
+					  if you really need those c-states please disable IntelFADTSpec.
+
+  P-States=<dict>		P-States fine tuning method, see usage below(GeneratePStates=Yes is needed).
+  ACPIDropTables=<dict>		drop acpi table(s) method (can drop any unwanted tables), see usage below.
+  C-States=<dict>		C-States fine tuning method, see usage below(GenerateCStates=Yes is needed).
+  
+  							
+  UpdateACPI=Yes|No    Enable/Disable ACPI version update(Disabled by default). 			                
+
+  MaxBusRatio=<n>	(was BusRatio) Set the current Bus Ratio to n, 
+			        n must be a multiple of 10,
+					(eg. if you want to set a bus ratio to 8.5, n will be
+			        8.5*10=85), 
+			        if n = 0, MaxBusRatio = Disable,
+			        if set, Acpipatcher will drop every P-states with
+			        a bus ratio higher than n.
+						  
+  MinBusRatio=<n>	Set the Minimum Bus Ratio to n,
+			        n must be a multiple of 10,
+			        (eg. if you want to set the bus ratio to 8.5, n will be
+			        8.5*10=85), if set Acpipatcher will drop every 
+			        P-states with a bus ratio lower than n, 
+			        if n = 0, MinBusRatio = Disable.
+		  
+  P-States usage e.g: (by default all numbers must be expressed in base 16, 
+			          except the pss statue key and base key itself)
+		
+		<key>P-States</key>
+		<dict>
+		<key>0</key> // the pss status (must be expressed in Base 10)
+		<dict>
+		<key>Bus Master Latency</key>
+		<string>10</string>
+		<key>Control</key>
+		<string>18719</string>
+		<key>CoreFreq</key>
+		<string>3164</string>
+		<key>Transition Latency</key>
+		<string>10</string>
+		</dict>
+                <key>1</key> // the pss status (must be expressed in Base 10)
+                .
+                .
+                .
+		<dict/>
+		<key>2</key> // the pss status (must be expressed in Base 10)
+                .
+                .
+                .
+		<dict/>
+                <key>X</key> // the pss status (must be expressed in Base 10)
+                .
+                .
+                .
+		<dict/>
+		<key>Base</key>
+		<string>10</string>  // must always be expressed in Base 10 
+		<key>Mode</key>
+		<string>Default</string>
+		</dict> 	
+									 
+
+  C-States usage e.g: (by default all numbers must be expressed in base 16, 
+			          except the base key itself)
+
+		<key>C-states</key>
+		<dict>
+		<key>C1</key>
+		<dict>
+		<key>Latency</key>
+		<string>THE LATENCY FOR THIS STATE</string>
+		<key>Power</key>
+		<string>THE POWER FOR THIS STATE</string>
+		</dict>
+		.
+		.							
+		<key>C4</key>
+		<dict>
+		<key>Latency</key>
+		<string>THE LATENCY FOR THIS STATE</string>
+		<key>Power</key>
+		<string>THE POWER FOR THIS STATE</string>
+		</dict>
+		</dict>
+		
+  ACPIDropTables usage e.g: 
+
+		<key>ACPIDropTables</key>
+		<dict>
+		<key>SSDT</key>
+		<string></string> // drop SSDT table(s)
+		<key>TAMG</key>
+		<string>Yes</string> //drop TAMG table
+		<key>ECDT</key>
+		<string>ANY_VALUE_EXCEPT_NO</string> //drop ECDT table
+		<key>XXXX</key>
+		<string></string> //drop XXXX table (if exist)
+		<key>YYYY</key>
+		<string>No</string> //do not drop YYYY table (if exist)
+		</dict>
+
+
+Acpipatcher module:
+------------------
+  EnableAcpiModule=Yes|No	Fully enable/disable the Acpipatcher module (Enabled by default, if the module is installed)
+     
+  RestartFix=Yes|No			Enable/Disable internal restart fix patch(Enabled by default, only available for intel platform).
+  
+  EnableSpeedStep=Yes|No	Enable/Disable GenerateCStates & GeneratePStates (Disabled by default).
+  
+  GeneratePStates=Yes|No	Enable/Disable Generate P-states SSDT table (Disabled by default).
+  GenerateCStates=Yes|No	Enable/Disable Generate C-states SSDT table (Disabled by default).
+  EnableC4State=Yes|No		Enable C4 state in C-states SSDT table, GenerateCStates=Yes is needed (Disabled by default).
+  
+  P-States=<dict>			P-States fine tuning method, see usage below(GeneratePStates=Yes is needed).
+  ACPIDropTables=<dict>		drop acpi table(s) method (can drop any unwanted tables), see usage below.
+  C-States=<dict>			C-States fine tuning method, see usage below(GenerateCStates=Yes is needed).
+  
+  DSDT=<file>   	Use an alternate DSDT.aml file,
+			        (default path: /DSDT.aml Extra/DSDT.aml,
+			        bt(0,0)/Extra/DSDT.aml).
+
+  quickSSDTsearch=Yes|No    If Yes, Acpipatcher will not search ssdt-(x+1).aml 
+			                if ssdt-x.aml do not exist,
+			                (eg. if ssdt-0.aml do not exist,
+                            Acpipather will not search ssdt-1.aml)(Enabled by default).
+							
+  UpdateACPI=Yes|No    Enable/Disable ACPI version update(Disabled by default). 			                
+
+  MaxBusRatio=<n>	(was BusRatio) Set the current Bus Ratio to n, 
+			        n must be a multiple of 10,
+					(eg. if you want to set a bus ratio to 8.5, n will be
+			        8.5*10=85), 
+			        if n = 0, MaxBusRatio = Disable,
+			        if set, Acpipatcher will drop every P-states with
+			        a bus ratio higher than n.
+						  
+  MinBusRatio=<n>	Set the Minimum Bus Ratio to n,
+			        n must be a multiple of 10,
+			        (eg. if you want to set the bus ratio to 8.5, n will be
+			        8.5*10=85), if set Acpipatcher will drop every 
+			        P-states with a bus ratio lower than n, 
+			        if n = 0, MinBusRatio = Disable.
+		  
+  P-States usage e.g: same as acpicodec  								 
+
+  C-States usage e.g: same as acpicodec 
+		
+  ACPIDropTables usage e.g: same as acpicodec 

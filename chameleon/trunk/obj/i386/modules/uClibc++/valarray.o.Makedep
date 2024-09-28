@@ -1,0 +1,10 @@
+valarray.o: valarray.cpp /Users/chris/chameleon/trunk/autoconf.h \
+  include/valarray include/basic_definitions \
+  include/system_configuration.h include/cstddef \
+  /Users/chris/chameleon/trunk/i386/include/stddef.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/_types.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/cdefs.h \
+  /Users/chris/chameleon/trunk/i386/include/machine/_types.h \
+  /Users/chris/chameleon/trunk/i386/include/i386/_types.h include/cmath \
+  /Users/chris/chameleon/trunk/i386/include/math.h \
+  /Users/chris/chameleon/trunk/i386/include/architecture/i386/math.h

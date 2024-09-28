@@ -1,0 +1,14 @@
+
+MODULE_NAME = NVRAM
+MODULE_AUTHOR = Slice
+MODULE_VERSION = "1.0.0"
+MODULE_COMPAT_VERSION = "1.0.0"
+MODULE_DESCRIPTION = NVRAM support (remember values from previous boot)
+MODULE_START = $(MODULE_NAME)_start
+MODULE_DEPENDENCIES = 
+
+DIR = NVRAM
+
+MODULE_OBJS = NVRAM.o
+
+include ../MakeInc.dir

@@ -1,0 +1,3 @@
+typeinfo.o: typeinfo.cpp /Users/chris/chameleon/trunk/autoconf.h \
+  include/typeinfo include/exception include/basic_definitions \
+  include/system_configuration.h

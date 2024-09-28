@@ -1,0 +1,2 @@
+prf.o: prf.c /Users/chris/chameleon/trunk/autoconf.h \
+  /Users/chris/chameleon/trunk/i386/include/stdarg.h

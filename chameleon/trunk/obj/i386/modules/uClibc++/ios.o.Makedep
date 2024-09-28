@@ -1,0 +1,29 @@
+ios.o: ios.cpp /Users/chris/chameleon/trunk/autoconf.h include/ios \
+  include/basic_definitions include/system_configuration.h \
+  include/cstddef /Users/chris/chameleon/trunk/i386/include/stddef.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/_types.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/cdefs.h \
+  /Users/chris/chameleon/trunk/i386/include/machine/_types.h \
+  /Users/chris/chameleon/trunk/i386/include/i386/_types.h include/locale \
+  include/string include/char_traits \
+  /Users/chris/chameleon/trunk/i386/include/string.h \
+  /Users/chris/chameleon/trunk/i386/include/_types.h include/exception \
+  include/memory include/new include/cstdlib \
+  /Users/chris/chameleon/trunk/i386/include/stdlib.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/types.h \
+  /Users/chris/chameleon/trunk/i386/include/machine/types.h \
+  /Users/chris/chameleon/trunk/i386/include/i386/types.h \
+  /Users/chris/chameleon/trunk/i386/include/machine/endian.h \
+  /Users/chris/chameleon/trunk/i386/include/i386/endian.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/_endian.h \
+  /Users/chris/chameleon/trunk/i386/include/libkern/_OSByteOrder.h \
+  /Users/chris/chameleon/trunk/i386/include/libkern/i386/_OSByteOrder.h \
+  /Users/chris/chameleon/trunk/i386/include/sys/_structs.h \
+  include/iterator_base include/utility include/cstdio \
+  /Users/chris/chameleon/trunk/i386/include/stdio.h \
+  include/func_exception include/vector include/iterator include/iosfwd \
+  include/algorithm include/functional include/type_traits \
+  include/ostream include/streambuf include/ostream_helpers \
+  include/cctype /Users/chris/chameleon/trunk/i386/include/ctype.h \
+  /Users/chris/chameleon/trunk/i386/include/runetype.h include/istream \
+  include/istream_helpers include/fstream
